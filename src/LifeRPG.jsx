@@ -121,17 +121,28 @@ export default function LifeRPG() {
       {/* 장비창 */}
       <div className="equipment">
         <h2>🧍 장비창</h2>
-        <div className="silhouette">
-          <svg viewBox="0 0 200 350" width="150">
-            <circle cx="100" cy="55" r="28" fill="#334155" />
-            <rect x="70" y="85" width="60" height="90" rx="18" fill="#334155" />
-            <rect x="55" y="175" width="90" height="130" rx="20" fill="#334155" />
-          </svg>
-          <div className="slot" style={{ top: 10, left: 0 }}>무기</div>
-          <div className="slot" style={{ top: 10, right: 0 }}>방패</div>
-          <div className="slot" style={{ top: 120, left: 50 }}>갑옷</div>
-          <div className="slot" style={{ top: 300, left: 80 }}>반지</div>
-        </div>
+    {/* LifeRPG.jsx 안 silhouette 부분 교체 */}
+<div className="silhouette">
+  <svg viewBox="0 0 200 400" width="180">
+    {/* 머리 */}
+    <circle cx="100" cy="45" r="30" fill="#334155" />
+    {/* 목 */}
+    <rect x="85" y="75" width="30" height="20" rx="8" fill="#334155" />
+    {/* 상체(어깨포함) */}
+    <path d="M40 95 Q100 60 160 95 L160 180 Q100 210 40 180 Z" fill="#334155" />
+    {/* 하체 */}
+    <path d="M60 180 L80 320 Q100 350 120 320 L140 180 Z" fill="#334155" />
+    {/* 팔 */}
+    <path d="M40 110 L20 220 Q40 230 60 180 Z" fill="#334155" />
+    <path d="M160 110 L180 220 Q160 230 140 180 Z" fill="#334155" />
+  </svg>
+
+  {/* 아이템 슬롯 */}
+  <div className="slot" style={{ top: 20, left: -10 }}>무기</div>
+  <div className="slot" style={{ top: 20, right: -10 }}>방패</div>
+  <div className="slot" style={{ top: 110, left: 70 }}>갑옷</div>
+  <div className="slot" style={{ top: 310, left: 90 }}>반지</div>
+</div>
         <table>
           <thead>
             <tr><th>부위</th><th>아이템</th><th>등급</th></tr>

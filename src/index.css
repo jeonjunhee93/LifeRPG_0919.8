@@ -1,0 +1,55 @@
+/* 기본 스타일 (초보자-friendly) */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', Arial, sans-serif; background:#0f172a; color:#e2e8f0; }
+h1, h2 { margin: 0 0 12px; }
+
+.container { 
+  max-width: 1080px; 
+  margin: 0 auto; 
+  padding: 16px; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 16px; 
+}
+.container > h1, .container > .stats { grid-column: 1 / -1; }
+
+.stats, .equipment, .quests, .inventory {
+  background:#111827;
+  border:1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.silhouette { position: relative; display: inline-block; margin-right: 16px; }
+.slot {
+  position: absolute; 
+  background:#1f2937; 
+  border:1px dashed #374151; 
+  padding: 4px 8px; 
+  border-radius: 8px; 
+  font-size: 12px;
+}
+
+table { width:100%; border-collapse: collapse; margin-top: 8px; }
+th, td { border-bottom:1px solid #1f2937; padding:8px; text-align:left; }
+th { background:#0b1220; }
+
+button {
+  border: 1px solid #374151;
+  background:#1f2937;
+  color:#e2e8f0;
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+button:hover { filter: brightness(1.1); }
+
+ul { list-style: none; padding: 0; margin: 0; }
+li { padding: 6px 8px; border:1px solid #1f2937; border-radius:8px; margin-bottom: 6px; }
+
+/* 레어리티 색상 */
+.rarity-common { color:#cbd5e1; }
+.rarity-rare { color:#60a5fa; }
+.rarity-epic { color:#a78bfa; }
+.rarity-legendary { color:#fbbf24; font-weight: 700; }
